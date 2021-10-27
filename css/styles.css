@@ -1,0 +1,182 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+nav {
+    margin: 1rem;;
+    border-bottom: 1px solid #A61F11;
+    border-top: 1px solid #DA0090;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+nav li {
+    display:inline-block;
+}
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+.zoom { 
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+    display: inline-block;
+    padding: 1rem;
+}
+  
+.zoom:hover {
+    transform: scale(2.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+ }
+header {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+}
+.leftheader{
+    flex-basis: 40%;
+    text-align: right;
+    
+}
+.rightheader {
+    flex-basis: 60%;
+    margin-top: 3.5rem;
+}
+.rightheader p{
+    margin-top: -1.5rem;
+}
+
+
+header img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 200px;
+    height: 250px;
+}
+footer {
+    margin-top: 1rem;
+    padding: 1rem 0 3rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #A61F11;
+}
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+footer li {
+    display: inline-block;
+}
+
+h2{
+    text-align: center;
+}
+.experience::after, .experience::before{
+    box-sizing: border-box;
+}
+.experience {
+    display: inline-block;
+}
+
+/*
+#skills {
+    display: flex;
+    flex-direction: column;
+   
+}
+section .row {
+    display: flex;
+    justify-content: center;
+}
+.skill {
+    flex-grow: 1;
+
+}
+*/
+section img {
+    width: 64px;
+    height: 64px;
+}
+#skills {
+    border: 3px solid green;
+    background-color: #EAF2FA;
+    font-family:  montserrat,sans-serif;
+
+}
+.row {
+    border:3px solid purple;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+}
+@media screen and (max-width: 500px) {
+    .row {
+        grid-template-rows: repeat(1fr);
+    }
+}
+
+.skill {
+    
+    margin:1rem;
+    text-align: center;
+    font-family:  montserrat,sans-serif;
+}
+
+h3 {
+    font-family:  montserrat,sans-serif;
+    font-size: 22.5px;
+   
+    color: #333;
+    text-align: center;
+}
+.skill p {
+    text-align: center;
+    color: #555;
+    font-size: 14.4px;
+    font-weight: 400;
+    margin:0;
+}
+.Experience {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.Experience > div {
+    flex-grow: 1;
+    flex: 1;
+    border: 2px solid red;
+}
+.Experinece > div:last-of-type {
+    flex: 2;
+}
+.Experience > div > article {
+    margin : 30px 0;
+}
+
+/*
+display: flex;
+flex-wrap : wrap;
+
+flex : 1 1 250px;
+
+
+display : grid;
+grid-template-columns: repeat(auto-fit, minmax(250px,1));
